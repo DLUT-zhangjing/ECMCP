@@ -8,21 +8,21 @@ import java.math.BigDecimal;
 public class Main_Procedure {
 	public static void main(String args[]){
 		try{
-			String pathway_file="E:\\毕业论文(张晶)\\论文实现\\数据\\pathwayfile.txt";
-			String data_file="E:\\实验数据\\ArabidopsisOxygen.arff";
-			String selectdatafilename="E:\\毕业论文(张晶)\\论文实现\\数据\\data\\";
+			String pathway_file="pathwayfile.txt";
+			String data_file="ArabidopsisOxygen.arff";
+			String selectdatafilename="pathway_file.getParent()"+"\\data\\";
 			for(double threshold=0.05;threshold<=0.05;threshold=threshold+0.1){
 				
 				BigDecimal b =new BigDecimal(threshold);
 				threshold=b.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
 				
-			    int cl_num=2;
+			        int cl_num=2;
 				int lt_num=20;
 				//Gene_Select gene_select=new Gene_Select(pathway_file,data_file,selectdatafilename,threshold,cl_num,lt_num);
 				//gene_select.run();
 				//char gr_flag=gene_select.getGR_flag();
 				File in=new File(pathway_file);
-				String c_data_path="E:\\毕业论文(张晶)\\论文实现\\数据\\Red_data\\"+threshold;
+				String c_data_path="pathway_file.getParent()"+"\\Red_data\\"+threshold;
 				int iter=10;
 				double percent=0.6;
 				for(double kappa=0.1;kappa<1.0;kappa=kappa+0.1){
