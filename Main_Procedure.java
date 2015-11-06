@@ -9,7 +9,7 @@ public class Main_Procedure {
 	public static void main(String args[]){
 		try{
 			String pathway_file="pathwayfile.txt";
-			String data_file="ArabidopsisOxygen.arff";
+			String data_file="Arabidopsis-Oxygen.arff";
 			String selectdatafilename="pathway_file.getParent()"+"\\data\\";
 			for(double threshold=0.05;threshold<=0.05;threshold=threshold+0.1){
 				
